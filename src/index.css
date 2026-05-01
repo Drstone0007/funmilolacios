@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Rajdhani", sans-serif;
+  --font-mono: "Share Tech Mono", monospace;
+
+  --color-gold: #FFB928;
+  --color-cyan: #00FFE0;
+  --color-blue: #4080FF;
+  --color-red: #FF4560;
+  --color-green: #00FF88;
+  --color-purple: #B060FF;
+  --color-bg: #020508;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-[#E8EAF0] font-sans overflow-hidden;
+  }
+}
+
+.scanline {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.025) 2px, rgba(0, 0, 0, 0.025) 4px);
+}
+
+.scan-sweep {
+  position: fixed;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 185, 40, 0.5), rgba(0, 255, 224, 0.3), transparent);
+  animation: sweep 6s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes sweep {
+  0% { top: -4px }
+  100% { top: 100vh }
+}
+
+@keyframes spin {
+  from { transform: rotate(0) }
+  to { transform: rotate(360deg) }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.15 }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(50%) }
+  100% { transform: translateX(-100%) }
+}
+
+@keyframes ticker-fast {
+  0% { transform: translateX(100%) }
+  100% { transform: translateX(-200%) }
+}
+
+.ticker-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 40s linear infinite;
+}
+
+.ticker-scroll-fast {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker-fast 15s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/10;
+}
+

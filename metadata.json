@@ -1,0 +1,13 @@
+{
+  "name": "FUMILOLA HOME FOR AGED: CIOS Neural OS-1",
+  "description": "A specialized geriatric clinical decision support system. Neural swarm technology for real-time elderly care orchestration, diagnostics, and family updates.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "Geriatric-specialized multi-agent swarm",
+    "3D neural visualization",
+    "Voice and Vision integration"
+  ]
+}

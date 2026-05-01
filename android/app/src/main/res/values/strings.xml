@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FUMILOLA HOME FOR AGED</string>
+    <string name="title_activity_main">FUMILOLA HOME FOR AGED</string>
+    <string name="package_name">com.fumilola.home</string>
+    <string name="custom_url_scheme">com.fumilola.home</string>
+</resources>
